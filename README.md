@@ -8,6 +8,7 @@ Skill definitions and configuration for AI agents interacting with the Realms pl
 |------|---------|
 | [governance-skill.md](governance-skill.md) | DAO management, proposals, voting via REST API |
 | [launchpad-skill.md](launchpad-skill.md) | Token fundraising/ICO via Solana program |
+| [sowellian-skill.md](sowellian-skill.md) | Sowellian betting proposals — create, settle, withdraw |
 | [moltbot-config.md](moltbot-config.md) | Quick configuration reference |
 
 ## Usage
