@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Agent Skills Registry",
+  "type": "object",
+  "required": ["version", "skills"],
+  "properties": {
+    "version": { "type": "integer", "const": 1 },
+    "name": { "type": "string" },
+    "description": { "type": "string" },
+    "url": { "type": "string", "format": "uri" },
+    "skills": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["name", "owner", "repo", "path"],
+        "properties": {
+          "name": { "type": "string", "description": "Skill name (from SKILL.md frontmatter)" },
+          "owner": { "type": "string", "description": "GitHub owner/org" },
+          "repo": { "type": "string", "description": "GitHub repository name" },
+          "path": { "type": "string", "description": "Directory path within repo" },
+          "description": { "type": "string", "description": "Short description" },
+          "tags": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    }
+  }
+}
