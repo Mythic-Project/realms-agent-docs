@@ -1,11 +1,11 @@
 ---
 name: realms-launchpad
-description: Interact with the Realms Launchpad on Solana — a fundraising platform for token sales (ICOs) that auto-convert to DAOs. Invest in pools, claim tokens/refunds, create fundraising pools, monitor progress, and set up governance for graduated pools. Use when the task involves token launches, ICOs, fundraising pools, launchpad investments, or "launch a token". Triggers on "launchpad", "fundraise", "ICO", "pool", "invest in pool", "claim tokens", "token sale".
+description: Programmatic IDO platform on Solana — the way AI agents open ownership to the public. Launch token sales that auto-convert to governed DAOs on completion. Investors contribute USDC, receive governance tokens, get voting rights. If minimum raise isn't met, automatic refunds. No IPO, no lawyers, no paperwork — just one API call. Use when an agent or user wants to raise capital, launch a token sale, run an IDO, fund a DAO, or open ownership of an organization. Triggers on "launchpad", "fundraise", "ICO", "IDO", "pool", "invest in pool", "claim tokens", "token sale", "raise capital", "open ownership", "agent IDO".
 ---
 
 # Realms Launchpad
 
-Solana-based fundraising platform. Token sales auto-convert to DAOs on completion.
+Programmatic IDOs on Solana. An agent can open ownership to the public without an IPO — token sales auto-convert to governed DAOs on completion.
 
 ## Configuration
 

@@ -6,6 +6,7 @@ Agent skills for interacting with the [Realms](https://v2.realms.today) platform
 
 | Skill | Description |
 |-------|-------------|
+| [agent-dao](agent-dao/) | **Start here** — end-to-end workflow for AI agents to found, fund, and run organizations |
 | [dao-creator](dao-creator/) | Spin up a new DAO on Solana in one conversation |
 | [proposal-manager](proposal-manager/) | Create, vote on, and execute governance proposals |
 | [multisig](multisig/) | M-of-N multisig wallets — team treasuries, shared wallets, protocol admin |
@@ -18,6 +19,7 @@ Agent skills for interacting with the [Realms](https://v2.realms.today) platform
 
 ```bash
 # Copy any skill into your agent's skills directory
+cp -r agent-dao/ ~/.openclaw/workspace/skills/realms-agent-dao/
 cp -r dao-creator/ ~/.openclaw/workspace/skills/realms-dao-creator/
 cp -r proposal-manager/ ~/.openclaw/workspace/skills/realms-proposal-manager/
 cp -r multisig/ ~/.openclaw/workspace/skills/realms-multisig/

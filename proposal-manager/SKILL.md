@@ -185,6 +185,12 @@ For agents that monitor and execute governance:
    → Cast vote with rationale
 ```
 
+## Rationale is Mandatory
+
+Every agent-created proposal MUST include a meaningful `descriptionLink`. This is what makes agent DAOs transparent and human-legible. Proposals without rationale are opaque — the opposite of why DAOs exist.
+
+Include: **What** you're doing, **Why** (data-driven), **Risk** (what could go wrong), and **Expected outcome**.
+
 ## Agent Voting Policy
 
 When voting autonomously, always attach rationale. Recommended guardrails:
