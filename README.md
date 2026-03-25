@@ -29,6 +29,19 @@ cp -r launchpad/ ~/.openclaw/workspace/skills/realms-launchpad/
 cp -r sowellian/ ~/.openclaw/workspace/skills/realms-sowellian/
 ```
 
+Or use the CLI:
+
+```bash
+# Install all skills
+npx agent-skills add Mythic-Project/realms-agent-docs
+
+# Install one skill
+npx agent-skills add Mythic-Project/realms-agent-docs/governance
+
+# Install by short name (via registry)
+npx agent-skills add governance
+```
+
 Or point your agent to the raw SKILL.md files on GitHub.
 
 ## Programs

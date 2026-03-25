@@ -1,0 +1,73 @@
+{
+  "$schema": "https://github.com/Mythic-Project/realms-agent-docs/blob/main/registry.schema.json",
+  "version": 1,
+  "name": "Realms Agent Skills",
+  "description": "Official agent skills for the Realms platform on Solana",
+  "url": "https://github.com/Mythic-Project/realms-agent-docs",
+  "skills": {
+    "agent-dao": {
+      "name": "realms-agent-dao",
+      "owner": "Mythic-Project",
+      "repo": "realms-agent-docs",
+      "path": "agent-dao",
+      "description": "End-to-end workflow for AI agents to found, fund, and run autonomous on-chain organizations",
+      "tags": ["dao", "agent", "solana", "governance", "ido", "fund"]
+    },
+    "dao-creator": {
+      "name": "realms-dao-creator",
+      "owner": "Mythic-Project",
+      "repo": "realms-agent-docs",
+      "path": "dao-creator",
+      "description": "Spin up a new DAO on Solana in one conversation",
+      "tags": ["dao", "create", "solana", "organization"]
+    },
+    "proposal-manager": {
+      "name": "realms-proposal-manager",
+      "owner": "Mythic-Project",
+      "repo": "realms-agent-docs",
+      "path": "proposal-manager",
+      "description": "Create, vote on, and execute governance proposals",
+      "tags": ["governance", "proposal", "vote", "dao"]
+    },
+    "proposal-execution": {
+      "name": "realms-proposal-execution",
+      "owner": "Mythic-Project",
+      "repo": "realms-agent-docs",
+      "path": "proposal-execution",
+      "description": "Build executable proposal instructions — transfers, Jupiter swaps, Kamino, Drift, staking",
+      "tags": ["governance", "execution", "defi", "jupiter", "kamino", "drift", "treasury"]
+    },
+    "multisig": {
+      "name": "realms-multisig",
+      "owner": "Mythic-Project",
+      "repo": "realms-agent-docs",
+      "path": "multisig",
+      "description": "M-of-N multisig wallets — team treasuries, shared wallets, protocol admin",
+      "tags": ["multisig", "treasury", "security", "squads"]
+    },
+    "governance": {
+      "name": "realms-governance",
+      "owner": "Mythic-Project",
+      "repo": "realms-agent-docs",
+      "path": "governance",
+      "description": "Full DAO management — members, delegation, treasury, governances via REST API",
+      "tags": ["dao", "governance", "treasury", "api", "membership", "delegation"]
+    },
+    "launchpad": {
+      "name": "realms-launchpad",
+      "owner": "Mythic-Project",
+      "repo": "realms-agent-docs",
+      "path": "launchpad",
+      "description": "Programmatic IDO platform — token sales that auto-convert to governed DAOs",
+      "tags": ["ido", "launchpad", "fundraise", "token-sale", "ico"]
+    },
+    "sowellian": {
+      "name": "realms-sowellian",
+      "owner": "Mythic-Project",
+      "repo": "realms-agent-docs",
+      "path": "sowellian",
+      "description": "Prediction market governance — proposals are bets, winners get paid from losers",
+      "tags": ["prediction-market", "betting", "governance", "sowellian"]
+    }
+  }
+}
