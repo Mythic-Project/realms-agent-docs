@@ -1,5 +1,5 @@
 {
-  "name": "agent-skills",
+  "name": "@realms-today/agent-skills",
   "version": "0.1.0",
   "description": "Install agent skills from GitHub. Like shadcn, but for AI agents.",
   "bin": {
