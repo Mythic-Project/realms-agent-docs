@@ -9,6 +9,7 @@ Agent skills for interacting with the [Realms](https://v2.realms.today) platform
 | [dao-creator](dao-creator/) | Spin up a new DAO on Solana in one conversation |
 | [proposal-manager](proposal-manager/) | Create, vote on, and execute governance proposals |
 | [multisig](multisig/) | M-of-N multisig wallets — team treasuries, shared wallets, protocol admin |
+| [proposal-execution](proposal-execution/) | Build executable proposal instructions — transfers, swaps, DeFi, staking |
 | [governance](governance/) | Full DAO management — members, delegation, treasury, governances |
 | [launchpad](launchpad/) | Token fundraising (ICOs) that auto-convert to DAOs |
 | [sowellian](sowellian/) | Prediction market governance — proposals are bets, winners get paid |
@@ -20,6 +21,7 @@ Agent skills for interacting with the [Realms](https://v2.realms.today) platform
 cp -r dao-creator/ ~/.openclaw/workspace/skills/realms-dao-creator/
 cp -r proposal-manager/ ~/.openclaw/workspace/skills/realms-proposal-manager/
 cp -r multisig/ ~/.openclaw/workspace/skills/realms-multisig/
+cp -r proposal-execution/ ~/.openclaw/workspace/skills/realms-proposal-execution/
 cp -r governance/ ~/.openclaw/workspace/skills/realms-governance/
 cp -r launchpad/ ~/.openclaw/workspace/skills/realms-launchpad/
 cp -r sowellian/ ~/.openclaw/workspace/skills/realms-sowellian/

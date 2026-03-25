@@ -228,4 +228,5 @@ for (const txBase64 of transactions) {
 
 ## References
 
-For detailed API parameters, response formats, error codes, and data parsing: See [governance/references/api.md](../governance/references/api.md)
+- **API details** (endpoints, parameters, response formats, error codes): See [governance/references/api.md](../governance/references/api.md)
+- **Executable instructions** (40+ instruction types — transfers, Jupiter swaps, Kamino, Drift, staking, streaming): See [proposal-execution/SKILL.md](../proposal-execution/SKILL.md)
