@@ -46,7 +46,7 @@ Realms multisig = a council-only DAO where:
 | 5 | 60% | 3-of-5 | Protocol admin |
 | 7 | 43% | 3-of-7 | Large committee, fast execution |
 | 3 | 100% | 3-of-3 | Maximum security, all must sign |
-| 2 | 50% | 1-of-2 | Low security, any signer can execute |
+| 2 | 50% | 1-of-2 | Low security, any single signer can pass (with early tipping) |
 
 ## Workflow: Send Tokens from Multisig
 
@@ -95,7 +95,7 @@ POST /daos/{realmPk}/proposals/{proposalPk}/execute
 { "walletPublicKey": "ANY_WALLET" }
 ```
 
-Permissionless — anyone can trigger execution once quorum is met and voting period ends.
+Permissionless — anyone can trigger execution once quorum is met. Note: Realms multisigs use **strict vote tipping** by default, meaning proposals pass as soon as enough Approve votes are cast (no need to wait for the full voting period).
 
 ## Common Operations
 

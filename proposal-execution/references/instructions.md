@@ -1,6 +1,18 @@
 # Proposal Instruction Reference
 
-All instructions execute from the **governance treasury** address. Use `getNativeTreasuryAddress(governancePk)` as the authority/signer.
+All instructions execute from the **governance treasury** address. Derive it with `getNativeTreasuryAddress(governancePk, governanceProgramId)` — this is the PDA that acts as signer/authority.
+
+```typescript
+import { PublicKey } from '@solana/web3.js';
+
+const GOV_PROGRAM = new PublicKey('GovER5Lthms3bLBqWub97yVrMmEogzX7xNjdXpPPCVZw');
+
+const [nativeTreasury] = PublicKey.findProgramAddressSync(
+  [Buffer.from('native-treasury'), governancePk.toBuffer()],
+  GOV_PROGRAM
+);
+// nativeTreasury is the treasury wallet address
+```
 
 ## Token Transfer (SOL)
 
@@ -8,10 +20,13 @@ All instructions execute from the **governance treasury** address. Use `getNativ
 import { SystemProgram, PublicKey } from '@solana/web3.js';
 
 // Native SOL transfer from treasury
+// Use BigNumber for safe decimal conversion (avoid floating-point errors)
+import BigNumber from 'bignumber.js';
+
 const ix = SystemProgram.transfer({
   fromPubkey: new PublicKey(treasuryWallet),
   toPubkey: new PublicKey(recipientAddress),
-  lamports: BigInt(amount * 1e9), // SOL has 9 decimals
+  lamports: BigInt(new BigNumber(amount).multipliedBy(1e9).toFixed(0)), // SOL has 9 decimals
 });
 ```
 
@@ -29,8 +44,10 @@ const treasury = new PublicKey(treasuryWallet);
 const recipient = new PublicKey(recipientAddress);
 const programId = new PublicKey(tokenProgramId); // TOKEN_PROGRAM_ID or TOKEN_2022_PROGRAM_ID
 
-// Source: treasury's ATA for the token
+// Source: treasury's token account. For standard ATAs:
 const sourceAta = getAssociatedTokenAddressSync(mint, treasury, true, programId);
+// Note: for tokens where treasury holds in a non-ATA account, use the specific
+// token account address from the treasury's on-chain state instead.
 
 // Destination: recipient's ATA
 const destAta = getAssociatedTokenAddressSync(mint, recipient, true, programId);
@@ -45,10 +62,10 @@ if (!destInfo) {
   ));
 }
 
-// Transfer with decimal check
+// Transfer with decimal check — use BigNumber for safe amount conversion
 ixs.push(createTransferCheckedInstruction(
   sourceAta, mint, destAta, treasury,
-  BigInt(amount * Math.pow(10, decimals)),
+  BigInt(new BigNumber(amount).multipliedBy(new BigNumber(10).pow(decimals)).toFixed(0)),
   decimals, undefined, programId
 ));
 ```
@@ -62,7 +79,7 @@ const tokenAccount = getAssociatedTokenAddressSync(mint, treasury, true, program
 
 const ix = createBurnCheckedInstruction(
   tokenAccount, mint, treasury,
-  BigInt(amount * Math.pow(10, decimals)),
+  BigInt(new BigNumber(amount).multipliedBy(new BigNumber(10).pow(decimals)).toFixed(0)),
   decimals, undefined, programId
 );
 ```

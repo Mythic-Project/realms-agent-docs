@@ -43,10 +43,11 @@ Fee: **2 SOL**. Response includes unsigned transactions, optional co-signers, an
 | councilMembers | string[] | [] | Council wallet addresses |
 | communityMint | string | null | Existing token mint (creates new if omitted) |
 | votingPeriodDays | number | 3 | How long proposals stay open |
-| councilQuorum | number | 10 | % of council needed to pass (25 for multisig) |
+| councilQuorum | number | 10 (25 if multisig) | % of council vote needed to pass |
 | communityQuorum | number | 10 | % of community needed to pass |
 | treasuryCount | number | 1 | Number of treasury wallets |
 | isMultisig | boolean | false | Multisig-style (council-only, higher quorum) |
+| coolOffPeriodDays | number | 1 | Cool-off period after voting (days) |
 
 ## Metadata (Optional)
 

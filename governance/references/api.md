@@ -165,6 +165,7 @@ POST /daos/create
   "communityQuorum": 10,
   "treasuryCount": 1,
   "isMultisig": false,
+  "coolOffPeriodDays": 1,
   "basicInfo": {
     "displayName": "My DAO",
     "shortDescription": "...",

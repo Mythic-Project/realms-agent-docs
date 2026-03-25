@@ -155,10 +155,13 @@ const transferIx = SystemProgram.transfer({
 
 // 2. Create proposal
 const proposalIxs = [];
+// Fetch governance to get proposalCount (used as proposal index)
+const governanceAccount = await getGovernance(connection, governance);
+
 const proposalAddress = await withCreateProposal(
   proposalIxs, programId, version, realm, governance,
   tokenOwnerRecord, "Transfer 1 SOL", "Payment for services",
-  governingTokenMint, wallet, proposalIndex,
+  governingTokenMint, wallet, governanceAccount.account.proposalCount,
   VoteType.SINGLE_CHOICE, ['Approve'], true, wallet
 );
 
